@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link rel="stylesheet" href="../Library-App/style.css">
+</head>
+<body>
+    <div id="library-container">
+        <!-- form section -->
+        <div class="form-section">
+            <h2 class="form-header">Add a New Book</h2>
+            <form id="bookForm">
+                <label for="title">Book Title:</label>
+                <input type="text" id="title" required>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" required>
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" required>
+
+                <label for="pages">Number of Pages:</label>
+                <input type="number" id="pages" required>
+
+                <label for="read">Have you read it?</label>
+                <select id="read" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <!-- books log section -->
+        <div class="book-log">
+            <h2 class="book-log-heading">Book Logs</h2>
+            <p id="bookCount">Number of Books: 0</p>
+            <p id="readCount">Read: 0</p>
+            <p id="unreadCount">Unread: 0</p>
+        </div>
+
+        <!-- book display section -->
+        <div class="books-display">
+            <h2 class="books-display-heading">Library</h2>
+            <div id="booksGrid" class="books-grid">
+                <!-- sample books cards -->
+                <div class="book-card">
+                    <h3>Sample Book Title</h3>
+                    <p><strong>Author:</strong> Sample Author</p>
+                    <p><strong>Genre:</strong> Fiction</p>
+                    <p><strong>Pages:</strong> 300</p>
+                    <p><strong>Read:</strong> Yes</p>
+                    <button>Remove Book</button>
+                    <button>Toggle Read Status</button>
+                </div>
+                <div class="book-card">
+                    <h3>Sample Book Title</h3>
+                    <p><strong>Author:</strong> Sample Author</p>
+                    <p><strong>Genre:</strong> Fiction</p>
+                    <p><strong>Pages:</strong> 300</p>
+                    <p><strong>Read:</strong> Yes</p>
+                    <button>Remove Book</button>
+                    <button>Toggle Read Status</button>
+                </div>
+                <div class="book-card">
+                    <h3>Sample Book Title</h3>
+                    <p><strong>Author:</strong> Sample Author</p>
+                    <p><strong>Genre:</strong> Fiction</p>
+                    <p><strong>Pages:</strong> 300</p>
+                    <p><strong>Read:</strong> Yes</p>
+                    <button>Remove Book</button>
+                    <button>Toggle Read Status</button>
+                </div>
+                <div class="book-card">
+                    <h3>Sample Book Title</h3>
+                    <p><strong>Author:</strong> Sample Author</p>
+                    <p><strong>Genre:</strong> Fiction</p>
+                    <p><strong>Pages:</strong> 300</p>
+                    <p><strong>Read:</strong> Yes</p>
+                    <button>Remove Book</button>
+                    <button>Toggle Read Status</button>
+                </div>
+                <div class="book-card">
+                    <h3>Sample Book Title</h3>
+                    <p><strong>Author:</strong> Sample Author</p>
+                    <p><strong>Genre:</strong> Fiction</p>
+                    <p><strong>Pages:</strong> 300</p>
+                    <p><strong>Read:</strong> Yes</p>
+                    <button>Remove Book</button>
+                    <button>Toggle Read Status</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../Library-App/main.js"></script>
+    
+</body>
+</html>
