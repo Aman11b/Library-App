@@ -10,7 +10,6 @@
 ::-webkit-scrollbar {
     display: none;
 }
-
 body{
     background:linear-gradient(-120deg,#D6C0B3,#AB886D);
     color: #333;
@@ -43,7 +42,8 @@ body{
     margin: 0;
     color: #F9F6F2;
     font-size: 1.2em;
-    background: linear-gradient(120deg, #3B2F2F, #6C4B3F);
+    background: linear-gradient(120deg, #333, #5A4D4A);
+    color: #D1B4A3;
     text-align: center;
     padding: 0.2em 0;
     border-radius: 10px 10px 0 0;
@@ -103,8 +103,8 @@ body{
 
 .book-log h2 {
     margin: 0;
-    color:wheat;
-    background: linear-gradient(120deg, #6B5545, #3B2F2F);
+    background: linear-gradient(120deg, #333, #5A4D4A);
+    color: #D1B4A3;
     text-align: center;
     padding: 0.6em 0;
     border-radius: 10px 10px 0 0;
@@ -118,6 +118,8 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: relative
 }
+
+
 .books-display-heading{
     background: linear-gradient(120deg, #333, #5A4D4A);
     color: #D1B4A3;
@@ -137,6 +139,8 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 2em;
+    background: linear-gradient(-120deg, #EDE2D4, #AB886D);
+    height: 100%;
 }
 /* Individual book card */
 .book-card {
@@ -149,15 +153,20 @@ body{
     flex-direction: column;
     transition: transform 0.2s ease;
     color: #4B4034;
+    max-height: fit-content;
+}
+.read-book {
+    background-color: #2af559; /* Light green for read books */
+}
+.unread-book {
+    background-color: #f8d7da; /* Light red for unread books */
 }
 .book-card p{
     display: contents;
     font-size: 0.9em;
     color: #6B5545;
 }
-.book-card:hover {
-    transform: scale(1.01);
-}
+
 
 .book-card h3 {
     font-size: 1.2em;
@@ -179,4 +188,46 @@ body{
 
 .book-card button:hover {
     background-color: #6C4B3F;
+}
+/* Styling for the toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+input:checked + .slider:before {
+    transform: translateX(14px);
 }
